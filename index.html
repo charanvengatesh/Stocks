@@ -1,54 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-  <title>Stock Prediction</title>
-</head>
-<style>
-  html,body{
-    background-color: rgb(20,23,33);
-  }
-  #title{
-    text-align: center;
-    color: white;
-    font-family: 'Righteous', cursive;
-    font-size: 30px;
-  }
-</style>
-<body>
-  <h1 id="title"> Stonks</h1>
-  <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div id="tradingview_a8fa6"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
-        target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script type="text/javascript">
-      new TradingView.widget(
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stock Prediction</title>
+  </head>
+  <style>
+    html,
+    body {
+      background-color: rgb(20, 23, 33);
+    }
+    #title {
+      text-align: center;
+      color: white;
+      font-family: "Righteous", cursive;
+      font-size: 70px;
+    }
+    .tradingview-widget-container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  </style>
+  <body>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com" rel="noopener" target="_blank"
+          ><span class="blue-text">Ticker Tape</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+        {
+          "symbols": [
+            {
+              "proName": "OANDA:SPX500USD",
+              "title": "S&P 500"
+            },
+            {
+              "proName": "OANDA:NAS100USD",
+              "title": "Nasdaq 100"
+            },
+            {
+              "proName": "FX_IDC:EURUSD",
+              "title": "EUR/USD"
+            },
+            {
+              "proName": "BITSTAMP:BTCUSD",
+              "title": "BTC/USD"
+            },
+            {
+              "proName": "BITSTAMP:ETHUSD",
+              "title": "ETH/USD"
+            }
+          ],
+            "colorTheme": "dark",
+              "isTransparent": false,
+                "displayMode": "adaptive",
+                  "locale": "en"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <h1 id="title">Stonks</h1>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/symbols/NASDAQ-AAPL/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">AAPL Symbol Info</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+        async
+      >
+        {
+          "symbol": "NASDAQ:AAPL",
+            "width": 1000,
+              "locale": "en",
+                "colorTheme": "dark",
+                  "isTransparent": false
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget BEGIN -->
+    <div>
+      <div id="tradingview_a8fa6"></div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/symbols/NASDAQ-AAPL/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">AAPL Chart</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/tv.js"
+      ></script>
+      <script type="text/javascript">
+        new TradingView.widget({
+          width: 1200,
+          height: 610,
+          symbol: "NASDAQ:AAPL",
+          timezone: "America/Chicago",
+          theme: "dark",
+          style: "2",
+          locale: "en",
+          toolbar_bg: "#f1f3f6",
+          withdateranges: true,
+          range: "ytd",
+          hide_side_toolbar: false,
+          allow_symbol_change: true,
+          details: true,
+          hotlist: true,
+          calendar: true,
+
+          container_id: "tradingview_a8fa6"
+        });
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/symbols/NASDAQ-AAPL/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">AAPL Fundamental Data</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js"
+        async
+      >
+        {
+          "symbol": "NASDAQ:AAPL",
+            "colorTheme": "dark",
+              "isTransparent": false,
+                "largeChartUrl": "",
+                  "displayMode": "regular",
+                    "width": 1200,
+                      "height": 500,
+                        "locale": "en"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/symbols/NASDAQ-AAPL/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">AAPL Profile</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js"
+        async
+      >
+        {
+          "symbol": "NASDAQ:AAPL",
+            "width": 1200,
+              "height": 400,
+                "colorTheme": "dark",
+                  "isTransparent": false,
+                    "locale": "en"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">Cryptocurrency Markets</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+        async
+      >
         {
           "width": 1200,
-          "height": 610,
-          "symbol": "NASDAQ:AAPL",
-          "timezone": "America/Chicago",
-          "theme": "dark",
-          "style": "2",
-          "locale": "en",
-          "toolbar_bg": "#f1f3f6",
-          "withdateranges": true,
-          "range": "ytd",
-          "hide_side_toolbar": false,
-          "allow_symbol_change": true,
-          "details": true,
-          "hotlist": true,
-          "calendar": true,
-      
-          "container_id": "tradingview_a8fa6"
+            "height": 490,
+              "defaultColumn": "overview",
+                "screener_type": "crypto_mkt",
+                  "displayCurrency": "USD",
+                    "colorTheme": "dark",
+                      "locale": "en"
         }
-      );
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-</body>
+      </script>
+    </div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com" rel="noopener" target="_blank"
+          ><span class="blue-text">Market Data</span></a
+        >
+        by TradingView
+      </div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js"
+        async
+      >
+        {
+          "width": 1200,
+            "height": 450,
+              "symbolsGroups": [
+                {
+                  "name": "Indices",
+                  "originalName": "Indices",
+                  "symbols": [
+                    {
+                      "name": "OANDA:SPX500USD",
+                      "displayName": "S&P 500"
+                    },
+                    {
+                      "name": "OANDA:NAS100USD",
+                      "displayName": "Nasdaq 100"
+                    },
+                    {
+                      "name": "FOREXCOM:DJI",
+                      "displayName": "Dow 30"
+                    },
+                    {
+                      "name": "INDEX:NKY",
+                      "displayName": "Nikkei 225"
+                    },
+                    {
+                      "name": "INDEX:DEU30",
+                      "displayName": "DAX Index"
+                    },
+                    {
+                      "name": "OANDA:UK100GBP",
+                      "displayName": "FTSE 100"
+                    }
+                  ]
+                },
+                {
+                  "name": "Commodities",
+                  "originalName": "Commodities",
+                  "symbols": [
+                    {
+                      "name": "CME_MINI:ES1!",
+                      "displayName": "E-Mini S&P"
+                    },
+                    {
+                      "name": "CME:6E1!",
+                      "displayName": "Euro"
+                    },
+                    {
+                      "name": "COMEX:GC1!",
+                      "displayName": "Gold"
+                    },
+                    {
+                      "name": "NYMEX:CL1!",
+                      "displayName": "Crude Oil"
+                    },
+                    {
+                      "name": "NYMEX:NG1!",
+                      "displayName": "Natural Gas"
+                    },
+                    {
+                      "name": "CBOT:ZC1!",
+                      "displayName": "Corn"
+                    }
+                  ]
+                },
+                {
+                  "name": "Bonds",
+                  "originalName": "Bonds",
+                  "symbols": [
+                    {
+                      "name": "CME:GE1!",
+                      "displayName": "Eurodollar"
+                    },
+                    {
+                      "name": "CBOT:ZB1!",
+                      "displayName": "T-Bond"
+                    },
+                    {
+                      "name": "CBOT:UB1!",
+                      "displayName": "Ultra T-Bond"
+                    },
+                    {
+                      "name": "EUREX:FGBL1!",
+                      "displayName": "Euro Bund"
+                    },
+                    {
+                      "name": "EUREX:FBTP1!",
+                      "displayName": "Euro BTP"
+                    },
+                    {
+                      "name": "EUREX:FGBM1!",
+                      "displayName": "Euro BOBL"
+                    }
+                  ]
+                },
+                {
+                  "name": "Forex",
+                  "originalName": "Forex",
+                  "symbols": [
+                    {
+                      "name": "FX:EURUSD"
+                    },
+                    {
+                      "name": "FX:GBPUSD"
+                    },
+                    {
+                      "name": "FX:USDJPY"
+                    },
+                    {
+                      "name": "FX:USDCHF"
+                    },
+                    {
+                      "name": "FX:AUDUSD"
+                    },
+                    {
+                      "name": "FX:USDCAD"
+                    }
+                  ]
+                }
+              ],
+                "colorTheme": "dark",
+                  "isTransparent": false,
+                    "locale": "en"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </body>
 </html>
